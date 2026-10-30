@@ -11,6 +11,16 @@ The measurements can be retrieved by:
 
 **No MCU or RouterBridge communication is required.** This project runs entirely on the Linux MPU.
 
+## Screenshot
+
+The screenshot below shows Arduino App Lab running the custom
+System Monitor brick alongside the native Gambas 3 application.
+
+The Gambas GUI retrieves CPU temperature, RAM usage, and system
+load from the Python HTTP server running inside a Docker container.
+
+![Arduino VENTUNO Q System Monitor with Gambas 3](images/gambas.png)
+
 ## 1. Project Objectives
 
 This project builds on an earlier experiment in which a native Gambas application communicated with a Python HTTP server running directly on Ubuntu.
