@@ -1,0 +1,11 @@
+services:
+  systemmonitor:
+    image: python:3.12-alpine
+
+    volumes:
+      - ../../../bricks/systemmonitor:/systemmonitor:ro
+
+    command: python3 /systemmonitor/moniteur.py
+
+    ports:
+      - "127.0.0.1:8001:9000"
