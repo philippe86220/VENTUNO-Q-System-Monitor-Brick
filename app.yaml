@@ -1,1 +1,7 @@
 
+name: VENTUNO-Q-System-Monitor-Brick
+description: ""
+ports: []
+bricks:
+- systemmonitor: {}
+icon: 📊
