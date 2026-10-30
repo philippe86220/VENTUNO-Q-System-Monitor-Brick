@@ -1,0 +1,16 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,53,25)
+  Text = ("Infos sytème  -  Philippe86220")
+  { Button1 Button
+    MoveScaled(19,19,16,4)
+    Text = ("Actualiser")
+  }
+  { TextArea1 TextArea
+    MoveScaled(4,1,44,16)
+    Font = Font["Bold"]
+    Foreground = Color.SelectedBackground
+    Alignment = Align.Center
+  }
+}

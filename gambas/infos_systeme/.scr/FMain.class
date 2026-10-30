@@ -1,0 +1,28 @@
+' Gambas class file
+
+Public Sub Button1_Click()
+  Dim client As HttpClient
+  Dim Reponse As String
+  Dim Data As Collection
+
+  client = New HttpClient
+  client.URL = "http://127.0.0.1:8001/mesures"
+  client.Async = False
+  client.Timeout = 10
+  client.Get()
+
+If client.Status < 0 Then
+    Print "Erreur"
+    Return
+  Else
+   ' Succès - données lues.
+    If Lof(client) Then Reponse = Read #client, Lof(client)
+    Print Reponse
+  End If
+
+  Data = JSON.Decode(Reponse)
+
+  TextArea1.Text = "Température : " & Data["temperature"] & " °C" & gb.NewLine
+  TextArea1.Text &= "RAM : " & Data["ram"] & " %" & gb.NewLine
+  TextArea1.Text &= "Charge : " & Data["charge"]
+End
